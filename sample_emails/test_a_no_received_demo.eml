@@ -1,0 +1,25 @@
+From: "Direct Internal User" <direct.sender@internal-corp.test>
+To: forensic.investigator@defense.test
+Subject: Synthetic Test A: Direct Email with No Received Headers
+Date: Wed, 08 Oct 2026 09:00:00 +0000
+Message-ID: <synthetic-test-a-001@internal-corp.test>
+Return-Path: <direct.sender@internal-corp.test>
+Reply-To: direct.sender@internal-corp.test
+Authentication-Results: mx.defense.test;
+    spf=none (mx.defense.test: no SPF record found);
+    dkim=none;
+    dmarc=none
+Content-Type: text/plain; charset="utf-8"
+X-Synthetic-Scenario: Case A - Email with No Received Headers
+
+SYNTHETIC BENCHMARK ARTIFACT - CASE A
+======================================
+This email represents a message transmitted directly without Received relay headers.
+
+Forensic Expectations:
+1. Parser must extract all available RFC 5322 metadata (From, To, Subject, Message-ID, Return-Path, Reply-To, Date).
+2. SPF, DKIM, DMARC must reflect Authentication-Results: none (or unknown if missing).
+3. Parser must report 0 Received relay hops.
+4. Forensic Timeline must include Client Claimed Date and Forensic Ingestion without fabricating hops.
+5. The Geolocation section must state: "No public IP address was found in the available email headers."
+6. The platform must never fabricate or invent an IP address or geolocation map.

@@ -1,0 +1,21 @@
+# Core Framework & ASGI Server
+fastapi>=0.110.0
+uvicorn[standard]>=0.28.0
+pydantic>=2.6.0
+
+# Database & ORM
+sqlalchemy>=2.0.25
+
+# HTTP Client (IP Geolocation & Threat Intelligence Lookups)
+httpx>=0.27.0
+
+# Machine Learning & Natural Language Processing
+scikit-learn>=1.4.0
+numpy>=1.26.0
+joblib>=1.3.2
+
+# Multipart File Upload Support (.eml file uploads)
+python-multipart>=0.0.9
+
+# Automated Testing
+pytest>=8.0.0

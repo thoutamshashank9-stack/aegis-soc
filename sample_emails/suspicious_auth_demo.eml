@@ -1,0 +1,27 @@
+Delivered-To: accountant@targetcorp.com
+Received: from unverified-gateway.vps-cloud.org (unverified-gateway.vps-cloud.org [193.106.191.22])
+        by mx.corporate-firewall.com with ESMTP id ABC129081;
+        Mon, 05 Oct 2026 14:10:02 +0000
+Received-SPF: softfail (mail.legitbank.com: domain does not permit sender IP 193.106.191.22)
+Authentication-Results: mx.corporate-firewall.com;
+       spf=softfail;
+       dkim=fail;
+       dmarc=fail;
+From: "First National Banking Alert" <alerts@legitbank.com>
+Reply-To: security-audit@unverified-relay.net
+Return-Path: <bounce@unverified-gateway.vps-cloud.org>
+To: accountant@targetcorp.com
+Subject: Account Verification Required - Suspicious Wire Transfer Attempt
+Date: Mon, 05 Oct 2026 14:09:55 +0000
+Message-ID: <BANK-ALERT-9921401@legitbank.com>
+Content-Type: text/plain; charset="utf-8"
+
+Dear Valued Customer,
+
+An unauthorized wire transfer of $8,450.00 was attempted from your commercial banking account.
+The transaction has been placed on hold.
+
+Please verify your credentials at our emergency portal:
+http://192.168.1.105/bank-auth-verify
+
+Failure to verify within 12 hours will result in account freeze.

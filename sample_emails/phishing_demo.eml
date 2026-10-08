@@ -1,0 +1,37 @@
+Delivered-To: victim.employee@targetenterprise.com
+Received: by 2002:a05:6e02:18c4:0:0:0:0 with SMTP id m4csp912028ilv;
+        Wed, 07 Oct 2026 10:14:20 -0700 (PDT)
+X-Received: by 2002:a17:906:4e51:0:0:0:0 with SMTP id f17mr1284918ejd.12;
+        Wed, 07 Oct 2026 10:14:18 -0700 (PDT)
+Received: from gateway.corporate-relay.net (gateway.corporate-relay.net. [198.51.100.25])
+        by mx.google.com with ESMTPS id o10si9948212ejk.48.2026.10.07.10.14.17
+        for <victim.employee@targetenterprise.com>;
+        Wed, 07 Oct 2026 10:14:18 -0700 (PDT)
+Received: from mail.attacker-spoof.xyz (mail.attacker-spoof.xyz [185.220.101.5])
+        by gateway.corporate-relay.net with ESMTP id 88A91F2;
+        Wed, 07 Oct 2026 10:14:10 -0700 (PDT)
+Authentication-Results: mx.google.com;
+       spf=fail (google.com: domain of support@microsoft-verify-sec.top does not designate 185.220.101.5 as permitted sender) smtp.mailfrom=support@microsoft-verify-sec.top;
+       dkim=fail header.i=@microsoft-verify-sec.top;
+       dmarc=fail (p=REJECT sp=REJECT dis=NONE) header.from=microsoft.com
+From: "Microsoft Office 365 Security Team" <support@microsoft-verify-sec.top>
+Reply-To: credential-collector@bad-actor-relay.online
+Return-Path: <bounces@attacker-spoof.xyz>
+To: victim.employee@targetenterprise.com
+Subject: URGENT: Your Office 365 Account is Suspended - Action Required within 24 Hours
+Date: Wed, 07 Oct 2026 17:13:58 +0000
+Message-ID: <20261007.PHISH.99128@attacker-spoof.xyz>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+CRITICAL SECURITY NOTICE
+
+Your corporate Microsoft 365 session has been temporarily suspended due to repeated failed login attempts from Moscow, Russia.
+
+Action is required immediately: If you do not verify your login credentials within 24 hours, your enterprise mailbox and OneDrive records will be permanently deleted.
+
+Please click the secure SSO portal below to verify your password and reset your two-factor authentication token:
+http://login-microsoft-security-auth-check.xyz/login?session=a9f182c49
+
+IT Security Operations Desk
+Microsoft Security Services

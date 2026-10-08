@@ -1,0 +1,70 @@
+{
+  "model_name": "TF-IDF + LogisticRegression (N-gram 1-2, sublinear TF)",
+  "classes": [
+    "legitimate",
+    "phishing",
+    "spam"
+  ],
+  "total_samples": 35,
+  "train_samples": 24,
+  "test_samples": 11,
+  "accuracy": 0.7273,
+  "precision_macro": 0.875,
+  "recall_macro": 0.8,
+  "f1_macro": 0.7802,
+  "precision_weighted": 0.8295,
+  "recall_weighted": 0.7273,
+  "f1_weighted": 0.7003,
+  "confusion_matrix": [
+    [
+      2,
+      3,
+      0
+    ],
+    [
+      0,
+      5,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "classification_report": {
+    "legitimate": {
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1-score": 0.5714285714285714,
+      "support": 5.0
+    },
+    "phishing": {
+      "precision": 0.625,
+      "recall": 1.0,
+      "f1-score": 0.7692307692307693,
+      "support": 5.0
+    },
+    "spam": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1.0
+    },
+    "accuracy": 0.7272727272727273,
+    "macro avg": {
+      "precision": 0.875,
+      "recall": 0.7999999999999999,
+      "f1-score": 0.7802197802197802,
+      "support": 11.0
+    },
+    "weighted avg": {
+      "precision": 0.8295454545454546,
+      "recall": 0.7272727272727273,
+      "f1-score": 0.7002997002997002,
+      "support": 11.0
+    }
+  },
+  "is_evaluated": true,
+  "evaluated_at": "Local Test Set Evaluation"
+}

@@ -1,0 +1,34 @@
+Received: from dns-relay.google-infra.test (dns-relay.google-infra.test [8.8.8.8])
+    by mx-ingress.defense.test with ESMTPS id GOOG-PUBLIC-001;
+    Wed, 08 Oct 2026 09:45:05 +0000
+From: "Cloud Infrastructure Alerts" <notifications@google-infra.test>
+To: sysadmin@defense.test
+Subject: Synthetic Test D: Live External Transit with Routable Public IP (8.8.8.8)
+Date: Wed, 08 Oct 2026 09:45:00 +0000
+Message-ID: <synthetic-test-d-004@google-infra.test>
+Return-Path: <bounces@google-infra.test>
+Reply-To: support@google-infra.test
+Authentication-Results: mx-ingress.defense.test;
+    spf=pass (google-infra.test: 8.8.8.8 is authorized transmitter);
+    dkim=pass;
+    dmarc=pass
+Content-Type: text/plain; charset="utf-8"
+X-Synthetic-Scenario: Case D - Email with Routable Public IP
+
+SYNTHETIC BENCHMARK ARTIFACT - CASE D
+======================================
+This email represents an external inbound transit via a valid, routable public IP address.
+
+Forensic Expectations:
+1. Parser must extract Received header:
+   "from dns-relay.google-infra.test (dns-relay.google-infra.test [8.8.8.8]) by mx-ingress.defense.test with ESMTPS id GOOG-PUBLIC-001; Wed, 08 Oct 2026 09:45:05 +0000"
+2. Extracted IP: 8.8.8.8
+3. IP Classification: public
+4. Geolocation status: success (Live API lookup permitted only for public IPs)
+5. Physical Geolocation Attributes:
+   - Country: United States
+   - ISP: Google LLC
+   - ASN: AS15169
+   - Latitude: Valid coordinate float
+   - Longitude: Valid coordinate float
+6. UI Map must render centered at the extracted latitude & longitude coordinates.

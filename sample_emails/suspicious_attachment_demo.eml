@@ -1,0 +1,37 @@
+Delivered-To: hr@targetcorp.com
+Received: from mail.external-freelance.cc (mail.external-freelance.cc [149.154.157.10])
+        by mx.targetcorp.com with ESMTP id SEC99401;
+        Sun, 04 Oct 2026 11:00:15 +0000
+Authentication-Results: mx.targetcorp.com;
+       spf=neutral;
+       dkim=none;
+       dmarc=none;
+From: "Robert Vance <External Contractor>" <robert.vance@contractors-hub.cc>
+To: hr@targetcorp.com
+Subject: Updated Q4 Invoicing & Banking Details - Overdue Payment
+Date: Sun, 04 Oct 2026 11:00:00 +0000
+Message-ID: <INV-2026-OCT-8819@contractors-hub.cc>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============7891234567=="
+
+--===============7891234567==
+Content-Type: text/plain; charset="utf-8"
+
+Hi Accounting,
+
+Please find attached the signed contract statement and invoice for September consulting services.
+Note that our wire routing details have been updated.
+
+Please review and execute payment immediately.
+
+Regards,
+Robert
+--===============7891234567==
+Content-Type: application/octet-stream; name="Invoice_September_2026.pdf.exe"
+Content-Disposition: attachment; filename="Invoice_September_2026.pdf.exe"
+Content-Transfer-Encoding: base64
+
+TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAA4AAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAAA=
+--===============7891234567==--

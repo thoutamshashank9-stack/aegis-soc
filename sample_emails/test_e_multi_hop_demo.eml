@@ -1,0 +1,37 @@
+Received: from internal-edge.defense.test (internal-edge.defense.test [172.16.100.5])
+    by mailstore.defense.test with ESMTP id DEF003-FINAL;
+    Wed, 08 Oct 2026 10:00:15 +0000
+Received: from cloud-filter.security-cdn.test (cloud-filter.security-cdn.test [1.1.1.1])
+    by internal-edge.defense.test with ESMTPS id DEF002-RELAY;
+    Wed, 08 Oct 2026 10:00:10 +0000
+Received: from egress-gateway.international-dispatch.test (egress-gateway.international-dispatch.test [198.51.100.77])
+    by cloud-filter.security-cdn.test with ESMTPS id DEF001-INGRESS;
+    Wed, 08 Oct 2026 10:00:05 +0000
+From: "Global Operations Center" <ops-security@international-dispatch.test>
+To: soc-investigator@defense.test
+Subject: Synthetic Test E: Multi-Hop Email Traversal Across Boundary Relays
+Date: Wed, 08 Oct 2026 10:00:00 +0000
+Message-ID: <synthetic-test-e-005@international-dispatch.test>
+Return-Path: <bounces@international-dispatch.test>
+Reply-To: ops-reply@international-dispatch.test
+Authentication-Results: internal-edge.defense.test;
+    spf=pass (international-dispatch.test: 1.1.1.1 designates permitted relay);
+    dkim=pass;
+    dmarc=pass
+Content-Type: text/plain; charset="utf-8"
+X-Synthetic-Scenario: Case E - Email with Multiple Received Headers (Multi-Hop)
+
+SYNTHETIC BENCHMARK ARTIFACT - CASE E
+======================================
+This email traverses a full 3-hop enterprise transit pathway:
+- Hop 1 (Origin): 198.51.100.77 (RFC 5737 Documentation IP -> Not geolocatable)
+- Hop 2 (Cloud Relay): 1.1.1.1 (Cloudflare Public IP -> Routable & Geolocatable)
+- Hop 3 (Final Ingestion): 172.16.100.5 (RFC 1918 Private IP -> Not geolocatable)
+
+Forensic Expectations:
+1. Parser must extract all 3 Received headers.
+2. Forensic MTA hops must maintain strict chronological sequence (Hop 1 -> Hop 2 -> Hop 3).
+3. The platform must isolate and geolocate ONLY the public IP (1.1.1.1).
+4. The other 2 IPs must display "Not geolocatable" with specific RFC rationales.
+5. Forensic Evidence section must display the complete Received headers for all 3 hops.
+6. A single map must render pinpointing the public relay location.

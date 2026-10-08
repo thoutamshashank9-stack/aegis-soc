@@ -1,0 +1,28 @@
+Received: from doc-gateway.testbed.example (doc-gateway.testbed.example [198.51.100.42])
+    by mx-receiver.defense.test with ESMTPS id RFC5737-TEST;
+    Wed, 08 Oct 2026 09:30:04 +0000
+From: "IETF Documentation Working Group" <rfceditor@testbed.example>
+To: researcher@defense.test
+Subject: Synthetic Test C: RFC Specification Testing with RFC 5737 Documentation IP
+Date: Wed, 08 Oct 2026 09:30:00 +0000
+Message-ID: <synthetic-test-c-003@testbed.example>
+Return-Path: <rfceditor@testbed.example>
+Authentication-Results: mx-receiver.defense.test;
+    spf=neutral;
+    dkim=none;
+    dmarc=none
+Content-Type: text/plain; charset="utf-8"
+X-Synthetic-Scenario: Case C - Email with RFC 5737 Documentation IP
+
+SYNTHETIC BENCHMARK ARTIFACT - CASE C
+======================================
+This email is an RFC example benchmark utilizing an IANA Special-Purpose documentation address.
+
+Forensic Expectations:
+1. Parser must extract Received header:
+   "from doc-gateway.testbed.example (doc-gateway.testbed.example [198.51.100.42]) by mx-receiver.defense.test with ESMTPS id RFC5737-TEST; Wed, 08 Oct 2026 09:30:04 +0000"
+2. Extracted IP: 198.51.100.42 (TEST-NET-2)
+3. IP Classification: documentation (RFC 5737)
+4. Geolocation status: "Not geolocatable"
+5. Reason: RFC 5737 Special-Purpose Documentation IP address. Reserved strictly for documentation and test examples.
+6. The platform must never call external geolocation APIs or fabricate coordinates.

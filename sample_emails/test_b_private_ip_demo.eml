@@ -1,0 +1,29 @@
+Received: from workstation-eng-12.corp.internal.test (workstation-eng-12.corp.internal.test [10.240.12.88])
+    by mx-internal.corp.internal.test with ESMTP id INT90123;
+    Wed, 08 Oct 2026 09:15:02 +0000
+From: "Internal Helpdesk" <helpdesk@corp.internal.test>
+To: employee.investigator@defense.test
+Subject: Synthetic Test B: Internal Network Relay with RFC 1918 Private IP
+Date: Wed, 08 Oct 2026 09:15:00 +0000
+Message-ID: <synthetic-test-b-002@corp.internal.test>
+Return-Path: <helpdesk@corp.internal.test>
+Reply-To: helpdesk@corp.internal.test
+Authentication-Results: mx-internal.corp.internal.test;
+    spf=pass (corp.internal.test: 10.240.12.88 is authorized internal relay);
+    dkim=pass;
+    dmarc=pass
+Content-Type: text/plain; charset="utf-8"
+X-Synthetic-Scenario: Case B - Email with RFC 1918 Private IP
+
+SYNTHETIC BENCHMARK ARTIFACT - CASE B
+======================================
+This email represents an enterprise message dispatched across a local intranet LAN.
+
+Forensic Expectations:
+1. Parser must extract Received header:
+   "from workstation-eng-12.corp.internal.test (workstation-eng-12.corp.internal.test [10.240.12.88]) by mx-internal.corp.internal.test with ESMTP id INT90123; Wed, 08 Oct 2026 09:15:02 +0000"
+2. Extracted IP: 10.240.12.88
+3. IP Classification: private (RFC 1918)
+4. Geolocation status: "Not geolocatable"
+5. Reason: RFC 1918 Private Network Address. Operates only within local area networks or behind NAT.
+6. No physical map should be rendered.
