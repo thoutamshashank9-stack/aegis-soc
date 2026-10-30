@@ -95,7 +95,7 @@ export default function Dashboard() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-6">
         <div>
           <h1 className="text-2xl font-black text-slate-100 tracking-tight flex items-center space-x-3">
-            <span>SOC Incident Operations & Threat Intelligence</span>
+            <span>AI-Powered Email Threat Detection, Geolocation & Forensic Intelligence Platform</span>
           </h1>
           <p className="text-sm text-slate-400 mt-1">
             Real-time multi-vector email threat classification, forensic timeline inspection & approximate IP geolocation.
